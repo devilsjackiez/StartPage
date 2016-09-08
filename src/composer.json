@@ -1,0 +1,12 @@
+{
+  "name": "l.chuamsakul/l.chuamsakul",
+  "authors": [
+    {
+      "name": "l.chuamsakul",
+      "email": "l.chuamsakul@t1ws0408.berlin-hq.local"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "*"
+  }
+}
