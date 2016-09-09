@@ -1,7 +1,7 @@
 <?php
 require('includes/config.php');
- ?>
-<div class="container" style="border-style: double" ;>
+?>
+<div class="container-fluid" style="border-style: ridge; background-color: #e9e9ff;" >
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <h2 class="+handwritten text-center">Login</h2>
@@ -11,11 +11,9 @@ require('includes/config.php');
 
         </div>
     </div>
-
-
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <form id="login_form" method="POST"  accept-charset="UTF-8" class="form">
+            <form id="login_form" method="POST" accept-charset="UTF-8" class="form">
                 <div class="row">
 
                     <div class="col-md-6 col-md-offset-3">
@@ -45,6 +43,9 @@ require('includes/config.php');
                     </div>
                 </div>
             </form>
+            <br><br><br><br>
+
+
 
 
         </div>
@@ -64,7 +65,7 @@ require('includes/config.php');
                 url: "authen.php",
                 data: "method=" + method + "&username=" + username + "&password=" + password,
                 success: function (html) {
-                    alert(html);
+                    /*alert(html);*/
                     if (html == 'true') {
                         location.reload();
                         $.ajax({

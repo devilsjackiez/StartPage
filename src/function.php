@@ -1,9 +1,10 @@
 <?php
+/*require('authen.php');*/
 $method = isset($_REQUEST['method']) ? $_REQUEST['method'] : null;
 
 switch ($method) {
     case 'validateUser':
-        $function = validateUser($_POST['username'],$_POST['password']);
+        $function = validateUser($_POST['username'], $_POST['password']);
         echo $function;
         break;
 
@@ -11,7 +12,7 @@ switch ($method) {
         if (isset($_POST['lists']) && isset($_POST['brandId'])) {
             $tools = $_POST['lists'];
             $brandId = $_POST['brandId'];
-            foreach($tools as $index => $tool) {
+            foreach ($tools as $index => $tool) {
                 $roleId = $tool['listId'];
                 $tools = $tool['listTools'];
                 updateToolsOnRoleIdAndBrandId($roleId, $brandId, $tools);
@@ -22,21 +23,18 @@ switch ($method) {
         }
         break;
     case 'insertTools':
-        $name=$_POST['name-tool'];
-        $info=$_POST['info-tool'];
+        $name = $_POST['name-tool'];
+        $info = $_POST['info-tool'];
         $url = $_POST['url-tool'];
-        $function = insertTools($name,$info,$url);
+        $function = insertTools($name, $info, $url);
         echo $function;
         break;
-
-
     case 'deleteToolsAll':
         $function = deleteToolsAll($_POST['id']);
         echo $function;
         break;
 
 }
-
 
 function conectDB(){
     $servername = "localhost";
@@ -52,7 +50,6 @@ function conectDB(){
     //echo "successful";
     return $conn;
 }
-
 function validateUser($username,$password){
     $conn=conectDB();
     $stmt = $conn->prepare("SELECT * FROM employee WHERE username=? AND password=?");
@@ -74,8 +71,6 @@ function validateUser($username,$password){
     } else {
         echo 'false';
     }}
-
-
 function getIdRole($id_brand){
 
     $conn = conectDB();
@@ -90,7 +85,6 @@ function getIdRole($id_brand){
     }
 
 }
-
 function getToolByRoleAndBrand($id_role, $id_brand){
     $conn=conectDB();
     $stmt = $conn->prepare("SELECT distinct brand_role_tool.id_tool ,tools.name,tools.info,tools.url FROM brand_role_tool INNER JOIN tools ON brand_role_tool.id_tool=tools.id_tools and brand_role_tool.id_role =? AND brand_role_tool.id_brand=?");
@@ -126,7 +120,6 @@ function getToolAll(){
         return null;
     }
 }
-
 function insertTools($name,$info,$url){
     $conn = conectDB();
     $stmt = $conn->prepare("INSERT INTO tools (name, info, url) VALUES (?,?,?)");
@@ -147,7 +140,6 @@ function deleteToolsAll($toolId) {
     $conn->close();
 
 }
-
 function deleteToolsFromRoleIdAndBrandId($roleId, $brandId) {
     $conn = conectDB();
     $stmt = $conn->prepare("DELETE FROM brand_role_tool WHERE id_role = ? AND id_brand = ?");
@@ -156,7 +148,6 @@ function deleteToolsFromRoleIdAndBrandId($roleId, $brandId) {
     $stmt->close();
     $conn->close();
 }
-
 function insertToolsOnRoleIdAndBrandId($roleId, $brandId, $tools) {
     $conn = conectDB();
     $stmt = $conn->prepare("INSERT INTO brand_role_tool (id_role, id_brand, id_tool) VALUES (?,?,?)");
@@ -168,12 +159,10 @@ function insertToolsOnRoleIdAndBrandId($roleId, $brandId, $tools) {
     $stmt->close();
     $conn->close();
 }
-
 function updateToolsOnRoleIdAndBrandId($roleId, $brandId, $tools) {
     deleteToolsFromRoleIdAndBrandId($roleId, $brandId);
     insertToolsOnRoleIdAndBrandId($roleId, $brandId, $tools);
 }
-
 function getTools($id_role)
 {
     $conn = conectDB();

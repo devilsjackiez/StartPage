@@ -2021,7 +2021,7 @@ tbody.collapse.in {
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
 	text-decoration: none;
 	color: #262626;
-	background-color: #984f7e;
+	background-color: #2a233f;
 }
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
 	color: #ffffff;
@@ -2743,6 +2743,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 
 }
 
+
 @media (max-width: 767px) {
 .navbar-nav .open .dropdown-menu {
 	position: static;
@@ -3013,7 +3014,11 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 }
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
 	color: #ffffff;
-	background-color: transparent;
+	background-color: #312b4b;
+}
+.navbar-inverse .navbar-nav > li > a:active{
+	color: #ffffff;
+	background-color: #211b36;
 }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
 	color: #ffffff;

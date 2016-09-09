@@ -22,8 +22,6 @@ if ($res->getStatusCode() == '200') {
         $employee_id = $data['employee-id'];
 
 
-
-
 //$session_id = $data['id'];
 
 // Send an asynchronous request.
@@ -47,13 +45,13 @@ if ($res->getStatusCode() == '200') {
             /* echo '<pre>';
             var_dump($obj_emplyee['data']);
             echo '</pre>'; */
-//print_r($SESSION);
-/*
-                        echo $employee_id,"\n";
-                        echo $employee_fullname,"\n";
-                        echo $employee_email,"\n";
-                        echo $employee_role,"\n";
-                        echo $employee_branch,"\n";*/
+            //print_r($SESSION);
+            /*
+            echo $employee_id,"\n";
+            echo $employee_fullname,"\n";
+            echo $employee_email,"\n";
+            echo $employee_role,"\n";
+            echo $employee_branch,"\n";*/
             echo 'true';
             /*header('Location: index.php');*/
 

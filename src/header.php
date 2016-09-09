@@ -37,7 +37,7 @@ include "function.php" ?>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span
                     class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-            <a href="index.php" class="navbar__brand">Start page</a></div>
+            <a href="index.php" class="navbar__brand" style="font-size: larger; font-style: oblique">Start page</a></div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <?php session_start(); ?>
@@ -45,7 +45,8 @@ include "function.php" ?>
                     ?>
                     <li><a href="admin-page.php">Manage</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hi <?php echo $_SESSION['employee_fullname']; ?> <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hi <?php echo $_SESSION['employee_fullname']; ?>
+                            <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="logout.php">Logout</a></li>
                             <!--<li><a href="#">Another action</a></li>-->
