@@ -20,7 +20,7 @@ include "header.php" ?>
 
 include "start-page.php";
 } else {
-    include "login-form.php";
+    include "login-form2.php";
 }
 echo "</div>"; ?>
 <?php include "footer.php" ?>

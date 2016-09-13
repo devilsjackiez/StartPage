@@ -19,6 +19,11 @@ include "function.php" ?>
         href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
         rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+<!--    <link rel="stylesheet" href="css/bootstrap.min.css"/>-->
+
+
+
 
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

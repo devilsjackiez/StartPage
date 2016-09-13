@@ -1,6 +1,7 @@
 <?php
 require('includes/config.php');
 ?>
+
 <div class="container-fluid" style="border-style: ridge; background-color: #e9e9ff;" >
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -15,11 +16,9 @@ require('includes/config.php');
         <div class="col-md-6 col-md-offset-3">
             <form id="login_form" method="POST" accept-charset="UTF-8" class="form">
                 <div class="row">
-
                     <div class="col-md-6 col-md-offset-3">
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Username" id="username" name="username"
-                                   type="text">
+                        <div class="form-group" >
+                            <input class="form-control" placeholder="Username" id="username" name="username" type="text">
                         </div>
                     </div>
                     <div class="col-md-6 col-md-offset-3">
