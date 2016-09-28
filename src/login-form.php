@@ -5,7 +5,7 @@ require('includes/config.php');
 <div class="container-fluid" style="border-style: ridge; background-color: #e9e9ff;" >
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <h2 class="+handwritten text-center">Login</h2>
+            <h2 class="+handwritten text-center">Login as Admin</h2>
             <p class="text-center">
             <div class="err" id="add_err"></div>
             </p>
@@ -61,7 +61,7 @@ require('includes/config.php');
             method = 'validateUser';
             $.ajax({
                 type: "POST",
-                url: "authen.php",
+                url: "login.php",
                 data: "method=" + method + "&username=" + username + "&password=" + password,
                 success: function (html) {
                     /*alert(html);*/

@@ -33,10 +33,10 @@ switch ($method) {
         $function = deleteToolsAll($_POST['id']);
         echo $function;
         break;
-
 }
 
-function conectDB(){
+function conectDB()
+{
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -50,77 +50,84 @@ function conectDB(){
     //echo "successful";
     return $conn;
 }
-function validateUser($username,$password){
-    $conn=conectDB();
+function validateUser($username, $password)
+{
+    $conn = conectDB();
     $stmt = $conn->prepare("SELECT * FROM employee WHERE username=? AND password=?");
-    $stmt->bind_param('ss', $username,$password);
+    $stmt->bind_param('ss', $username, $password);
     $stmt->execute();
     $stmt->store_result();
-    $stmt->bind_result($id_emp,$name,$id_brand,$username,$psw,$id_role);
+    $stmt->bind_result($id_emp, $name, $id_brand, $username, $psw, $id_role);
     session_start();
 
-    if ( $stmt-> num_rows > 0 ) {
-        while($stmt->fetch()) {
-            $_SESSION['name']=$name;
-            $_SESSION['user_name']=$username;
-            $_SESSION['id_role']=$id_role;
-            $_SESSION['id_brand']=$id_brand;
+    if ($stmt->num_rows > 0) {
+        while ($stmt->fetch()) {
+            $_SESSION['name'] = $name;
+            $_SESSION['user_name'] = $username;
+            $_SESSION['id_role'] = $id_role;
+            $_SESSION['id_brand'] = $id_brand;
         }
         echo 'true';
 
     } else {
         echo 'false';
-    }}
-function getIdRole($id_brand){
+    }
+}
+function getIdRole($id_brand)
+{
 
     $conn = conectDB();
     $stmt = $conn->prepare("SELECT distinct role.id_role, role.name FROM brand_role_tool INNER JOIN role ON brand_role_tool.id_brand=? and role.id_role = brand_role_tool.id_role");
     $stmt->bind_param('i', $id_brand);
     $stmt->execute();
     $stmt->store_result(); // need to call before using  $stmt->num_rows
-    if ( $stmt-> num_rows > 0 ) {
+    if ($stmt->num_rows > 0) {
         return $stmt;
     } else {
         return null;
     }
-
 }
-function getToolByRoleAndBrand($id_role, $id_brand){
-    $conn=conectDB();
-    $stmt = $conn->prepare("SELECT distinct brand_role_tool.id_tool ,tools.name,tools.info,tools.url FROM brand_role_tool INNER JOIN tools ON brand_role_tool.id_tool=tools.id_tools and brand_role_tool.id_role =? AND brand_role_tool.id_brand=?");
+function getToolByRoleAndBrand($id_role, $id_brand)
+{
+    $conn = conectDB();
+    $stmt = $conn->prepare("SELECT distinct brand_role_tool.id_tool ,tools.name,tools.info,tools.url,tools.img FROM brand_role_tool INNER JOIN tools ON brand_role_tool.id_tool=tools.id_tools and brand_role_tool.id_role =? AND brand_role_tool.id_brand=?");
     $stmt->bind_param('ii', $id_role, $id_brand);
     $stmt->execute();
     $stmt->store_result(); // need to call before using  $stmt->num_rows
-    if ( $stmt-> num_rows > 0 ) {
+    if ($stmt->num_rows > 0) {
         return $stmt;
     } else {
         return null;
     }
 
 }
-function getBrandAll( ){
-    $conn=conectDB();
+function getBrandAll()
+{
+    $conn = conectDB();
     $stmt = $conn->prepare("SELECT * FROM brands");
     $stmt->execute();
     $stmt->store_result(); // need to call before using  $stmt->num_rows
-    if ( $stmt-> num_rows > 0 ) {
+    if ($stmt->num_rows > 0) {
         return $stmt;
     } else {
         return null;
+
     }
 }
-function getToolAll(){
-    $conn=conectDB();
+function getToolAll()
+{
+    $conn = conectDB();
     $stmt = $conn->prepare("SELECT * FROM tools");
     $stmt->execute();
     $stmt->store_result(); // need to call before using  $stmt->num_rows
-    if ( $stmt-> num_rows > 0 ) {
+    if ($stmt->num_rows > 0) {
         return $stmt;
     } else {
         return null;
     }
 }
-function insertTools($name,$info,$url){
+function insertTools($name, $info, $url)
+{
     $conn = conectDB();
     $stmt = $conn->prepare("INSERT INTO tools (name, info, url) VALUES (?,?,?)");
     $stmt->bind_param('sss', $name, $info, $url);
@@ -128,7 +135,12 @@ function insertTools($name,$info,$url){
     $stmt->close();
     $conn->close();
 }
-function deleteToolsAll($toolId) {
+/*function updateTools($name, $info, $url)
+{
+
+}*/
+function deleteToolsAll($toolId)
+{
     $conn = conectDB();
     $stmt = $conn->prepare("DELETE FROM tools WHERE id_tools= ?");
     $stmt->bind_param('i', $toolId);
@@ -140,7 +152,8 @@ function deleteToolsAll($toolId) {
     $conn->close();
 
 }
-function deleteToolsFromRoleIdAndBrandId($roleId, $brandId) {
+function deleteToolsFromRoleIdAndBrandId($roleId, $brandId)
+{
     $conn = conectDB();
     $stmt = $conn->prepare("DELETE FROM brand_role_tool WHERE id_role = ? AND id_brand = ?");
     $stmt->bind_param('ii', $roleId, $brandId);
@@ -148,18 +161,20 @@ function deleteToolsFromRoleIdAndBrandId($roleId, $brandId) {
     $stmt->close();
     $conn->close();
 }
-function insertToolsOnRoleIdAndBrandId($roleId, $brandId, $tools) {
+function insertToolsOnRoleIdAndBrandId($roleId, $brandId, $tools)
+{
     $conn = conectDB();
     $stmt = $conn->prepare("INSERT INTO brand_role_tool (id_role, id_brand, id_tool) VALUES (?,?,?)");
     $stmt->bind_param('iii', $roleId, $brandId, $toolId);
-    foreach($tools as $index => $_toolId) {
+    foreach ($tools as $index => $_toolId) {
         $toolId = $_toolId;
         $stmt->execute();
     }
     $stmt->close();
     $conn->close();
 }
-function updateToolsOnRoleIdAndBrandId($roleId, $brandId, $tools) {
+function updateToolsOnRoleIdAndBrandId($roleId, $brandId, $tools)
+{
     deleteToolsFromRoleIdAndBrandId($roleId, $brandId);
     insertToolsOnRoleIdAndBrandId($roleId, $brandId, $tools);
 }

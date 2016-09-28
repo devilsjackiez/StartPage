@@ -42,15 +42,17 @@ if ($res->getStatusCode() == '200') {
             $_SESSION["employee_role"] = $employee_role;
             $_SESSION["employee_branch"] = $employee_branch;
 
+
+
             /* echo '<pre>';
             var_dump($obj_emplyee['data']);
             echo '</pre>'; */
             //print_r($SESSION);
-            /*
-            echo $employee_id,"\n";
-            echo $employee_fullname,"\n";
-            echo $employee_email,"\n";
-            echo $employee_role,"\n";
+
+/*            echo $employee_id,"\n";*/
+/*            echo $employee_fullname,"\n";*/
+/*            echo $employee_email,"\n";*/
+/*            echo $employee_role,"\n";
             echo $employee_branch,"\n";*/
             echo 'true';
             /*header('Location: index.php');*/

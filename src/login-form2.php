@@ -1,20 +1,19 @@
 <?php
 require('includes/config.php');
 ?>
+<br><br><br>
 <div class="col-md-8 col-md-offset-2">
 
-    <p class="text-center">
+    <p class="center-block" style="text-align: center;">
     <div class="err" id="add_err"></div>
     </p>
-
+    <br>
 </div>
 <div class="container">
     <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-        <div class="panel panel-info">
-            <div class="panel-heading">
-                <h3 class="text-center" style="font-weight: 800;color: #635593;">Login</h3>
+        <div class="panel panel-info" style="/*background-color: #262137;*/ background-color: rgba(32, 32, 32, 0.99); border-radius: 0.25cm; border-width: 2px;">
 
-            </div>
+            <h3 class="text-center" style="font-weight: 800;color: #fffee4;">Login</h3>
 
             <div style="padding-top:30px" class="panel-body">
 
@@ -37,16 +36,22 @@ require('includes/config.php');
                     <!-- Button -->
 
                     <div class="col-sm-12 controls">
-                        <input class="button --cream center-block" type="submit" id="login" value="login">
+                        <input class="button center-block" type="submit" id="login" value="login">
 
                     </div>
 
                 </form>
             </div>
+            <div class="text-right">
+                <li><a href="admin">Admin site</a></li>
+            </div>
         </div>
     </div>
 </div>
-<br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
 <script type="text/javascript">
 
     $(document).ready(function () {
