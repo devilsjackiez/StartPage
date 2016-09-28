@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ed0fba2-a4b3-4863-b940-e8b35337abc7" name="Default" comment="Add Admin Login &#10;and Non-function for navbar color and tools img">
+    <list default="true" id="9ed0fba2-a4b3-4863-b940-e8b35337abc7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/project.properties" afterPath="$PROJECT_DIR$/nbproject/project.properties" />
     </list>
@@ -404,7 +404,7 @@
       <workItem from="1474855152114" duration="27547000" />
       <workItem from="1474942321046" duration="23487000" />
       <workItem from="1475028463594" duration="659000" />
-      <workItem from="1475029386491" duration="23387000" />
+      <workItem from="1475029386491" duration="23454000" />
     </task>
     <task id="LOCAL-00001" summary="remove unwanted files">
       <created>1473417159510</created>
@@ -441,11 +441,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475060441300</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add Admin Login &#10;and Non-function for navbar color and tools img">
+      <created>1475060673789</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1475060673789</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="394546000" />
+    <option name="totallyTimeSpent" value="394613000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
