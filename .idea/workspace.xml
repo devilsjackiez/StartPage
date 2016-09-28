@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ed0fba2-a4b3-4863-b940-e8b35337abc7" name="Default" comment="add login form 2">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/admin-page.php" afterPath="" />
+    <list default="true" id="9ed0fba2-a4b3-4863-b940-e8b35337abc7" name="Default" comment="Add Admin Login &#10;and Non-function for navbar color and tools img">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/project.properties" afterPath="$PROJECT_DIR$/nbproject/project.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/authen.php" afterPath="$PROJECT_DIR$/src/authen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/bootstrap.css" afterPath="$PROJECT_DIR$/src/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/style.css" afterPath="$PROJECT_DIR$/src/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/footer.php" afterPath="$PROJECT_DIR$/src/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/function.php" afterPath="$PROJECT_DIR$/src/function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/header.php" afterPath="$PROJECT_DIR$/src/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.php" afterPath="$PROJECT_DIR$/src/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/login-form.php" afterPath="$PROJECT_DIR$/src/login-form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/login-form2.php" afterPath="$PROJECT_DIR$/src/login-form2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/start-page.php" afterPath="$PROJECT_DIR$/src/start-page.php" />
     </list>
     <ignored path="StartUp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -433,7 +422,7 @@
       <workItem from="1474855152114" duration="27547000" />
       <workItem from="1474942321046" duration="23487000" />
       <workItem from="1475028463594" duration="659000" />
-      <workItem from="1475029386491" duration="23082000" />
+      <workItem from="1475029386491" duration="23199000" />
     </task>
     <task id="LOCAL-00001" summary="remove unwanted files">
       <created>1473417159510</created>
@@ -456,11 +445,18 @@
       <option name="project" value="LOCAL" />
       <updated>1473757221185</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add Admin Login &#10;and Non-function for navbar color and tools img">
+      <created>1475060371988</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1475060371988</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="394241000" />
+    <option name="totallyTimeSpent" value="394358000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -537,7 +533,8 @@
     <MESSAGE value="remove unwanted files" />
     <MESSAGE value="Update Login Page" />
     <MESSAGE value="add login form 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="add login form 2" />
+    <MESSAGE value="Add Admin Login &#10;and Non-function for navbar color and tools img" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Admin Login &#10;and Non-function for navbar color and tools img" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -909,7 +906,7 @@
         <state relative-caret-position="221">
           <caret line="13" column="137" selection-start-line="13" selection-start-column="137" selection-end-line="13" selection-end-column="137" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
