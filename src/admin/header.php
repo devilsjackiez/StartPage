@@ -59,7 +59,7 @@ include "function.php"
                 <?php session_start(); ?>
                 <?php if (isset($_SESSION['user_name'])) {
                     ?>
-                    <li><a href="admin-page.php"><span class="glyphicon glyphicon-wrench" style="color: white;"></span> Manage</a></li>
+                    <li><a id="manage" href="admin-page.php"><span class="glyphicon glyphicon-wrench" style="color: white;"></span> Manage</a></li>
                     <li class="dropdown">
                         <!--<img class="img-circle" src="img/Jackie.jpg" style="width: 28px;height: 28px;" ><span style="text-indent: 2.5em"></span>-->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"

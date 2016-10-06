@@ -12,26 +12,27 @@ use GuzzleHttp\Client;
 
 if (isset($_SESSION['employee_email'])) {
     ?>
-    <br><br><br>
+    <br>
     <div class="container">
         <!--<img class="img-circle center-block img-responsive" src="img/Jackie.jpg" style="width: 180px;height: 190px ;border: double;">-->
 
 
         <?php $employeeID = $_SESSION['employee_id'] ?>
         <div class="center-block">
-            <h1 align="center" style="font-weight: 700;">Hello</h1>
+            <br>
             <br>
             <?php
 
-            /*$url = "http://hrm.clbs.co.th/addonplugin/qaswebservice/keycardimglist.php?f=getKeycardImg&customerId="+$employeeID;*/
-            $url = "http://hrm.clbs.co.th/addonplugin/qaswebservice/keycardimglist.php?f=getKeycardImg&customerId=80945";
-            if($pic = json_decode(file_get_contents($url))){
-                ?><img class="img-circle center-block img-responsive" src="<?php echo $pic ?>" style="width: 200px;height: 200px ;border: double;">
-            <?php } else if ($pic == null) {
-                ?><img class="img-circle center-block img-responsive" src="img/Jackie.jpg" style="width: 200px;height: 200px ;border: double;">
-           <?php }
+            $url = "http://hrm.clbs.co.th/addonplugin/qaswebservice/keycardimglist.php?f=getKeycardImg&customerId=" + $employeeID;
+            /*$url = "http://hrm.clbs.co.th/addonplugin/qaswebservice/keycardimglist.php?f=getKeycardImg&customerId=80945";*/
+            if ($pic = json_decode(file_get_contents($url))) {
+                ?><img class="img-circle center-block img-responsive" src="<?php echo $pic ?>"
+                       style="width: 180px;height: 180px ;border-style: ridge;">
+            <?php } else {
+                ?><img class="img-circle center-block img-responsive" src="img/blank-profile-hi.png"
+                       style="width: 180px;height: 180px ;border-style: ridge;">
+            <?php }
             ?>
-
 
             <!--
              try {
@@ -53,21 +54,15 @@ if (isset($_SESSION['employee_email'])) {
         </div>
         <br>
         <br>
-        <br>
-
         <div class="container">
             <div class="center-block">
-                <h1 style="font-family: 'Open Sans', Arial, sans-serif;font-weight: 800; font-size: 4ch; text-align: center;">
-                    Hi ! <?php echo $_SESSION['employee_fullname'] ?>, Welcome to start page</h1>
-                <h2 style="font-family: 'Open Sans', Arial, sans-serif;font-weight: 800; font-size: 7ch;text-align: center;">
+                <h2 style="font-family: 'Open Sans', Arial, sans-serif;font-weight: 800; font-size: 3ch; text-align: center;">
+                    Hi ! <?php echo $_SESSION['employee_fullname'] ?>, Welcome to start page</h2>
+                <h2 style="font-family: 'Open Sans', Arial, sans-serif;font-weight: 800; font-size: 4ch;text-align: center;">
                     <?php echo $_SESSION['employee_branch'] ?> Company
                 </h2>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-
     </div>
     <?php echo "</div>";
 

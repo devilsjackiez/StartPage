@@ -29,12 +29,23 @@ switch ($method) {
         $url = $_POST['url-tool'];
         $img = $_POST['img-tool'];
         $function = insertTools($name, $info, $url, $img);
+
         echo $function;
         break;
     case 'deleteToolsAll':
         $function = deleteToolsAll($_POST['id']);
         echo $function;
         break;
+    case 'UploadImageFile' :
+        $function = UploadImageFile();
+        break;
+    case 'UpdateTools':{
+        $name = $_POST['toolName'];
+        $info = $_POST['toolInfo'];
+        $url = $_POST['toolUrl'];
+        $toolid = $_POST['toolID'];
+        $function = UpdateTools($name,$info,$url,$toolid);
+    }
 }
 
 function conectDB()
@@ -151,6 +162,7 @@ function insertTools($name, $info, $url, $img)
 
 }
 
+
 function deleteToolsAll($toolId)
 {
     $conn = conectDB();
@@ -207,4 +219,24 @@ function getTools($id_role)
     } else {
         return null;
     }
+}
+
+function getToolsByName($name){
+    $conn = conectDB();
+    $stmt = $conn -> prepare("SELECT * FROM tools WHERE name=?");
+    $stmt->bind_param('s',$name);
+    $stmt->execute();
+    $stmt->store_result();
+    $stmt->bind_result($id_tool, $name, $info, $url, $img);
+
+}
+
+function UpdateTools ($name,$info,$url,$toolid){
+
+    $conn = conectDB();
+    $stmt = $conn->prepare("UPDATE tools SET `name`=?,`info`=?,`url`=? WHERE ?");
+    $stmt->bind_param('ssss',$name,$info,$url,$toolid);
+    $stmt->execute();
+    $stmt->close();
+    $conn->close();
 }

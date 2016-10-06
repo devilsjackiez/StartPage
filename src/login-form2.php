@@ -11,7 +11,8 @@ require('includes/config.php');
 </div>
 <div class="container">
     <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-        <div class="panel panel-info" style="/*background-color: #262137;*/ background-color: rgba(32, 32, 32, 0.99); border-radius: 0.25cm; border-width: 2px;">
+        <div class="panel panel-info"
+             style="/*background-color: #262137;*/ background-color: rgba(32, 32, 32, 0.99); border-radius: 0.25cm; border-width: 2px;">
 
             <h3 class="text-center" style="font-weight: 800;color: #fffee4;">Login</h3>
 
@@ -23,33 +24,31 @@ require('includes/config.php');
 
                     <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="username" type="text" class="form-control" name="username" value=""
+                        <input id="username" type="text" class="form-control" name="username" value="j.patanasutakit"
                                placeholder="username or email">
                     </div>
 
                     <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                         <input id="password" type="password" class="form-control" name="password"
-                               placeholder="password">
+                               placeholder="password" value="baynalove">
                     </div>
 
                     <!-- Button -->
 
                     <div class="col-sm-12 controls">
                         <input class="button center-block" type="submit" id="login" value="login">
-
                     </div>
 
                 </form>
             </div>
             <div class="text-right">
-                <li><a href="admin">Admin site</a></li>
+                <li><a href="admin" style="font-size: 1ch;color: cornsilk;">Admin site</a></li>
             </div>
         </div>
     </div>
 </div>
 <br><br><br><br><br><br><br><br><br><br><br><br>
-
 
 
 <script type="text/javascript">

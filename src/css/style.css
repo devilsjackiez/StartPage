@@ -6013,13 +6013,13 @@ p {
 
 .section.\--first {
     border-top: none;
-    padding-top: 90px !important;
+    padding-top: 30px !important;
 }
 
 .section.\--red {
     color: #222;
-    background-color: #ffffff;
-    background-image: url("../img/Background-Paper-White.jpg");
+    background-color: #e4e4e4;
+    /*background-image: url("../img/Background-Paper-White.jpg");*/
     background-repeat: repeat-y;
     background-position: center center;
     background-attachment: fixed;
@@ -6039,7 +6039,7 @@ p {
 
 .section.\--dark {
     color: #bbb;
-    background: url('../img/bg-dark.gif') #333;
+    background: #333;
 }
 
 .section.\--solid-dark {
@@ -6131,6 +6131,11 @@ p {
     top: 4px;
 }
 
+.button.\--dark {
+    background-image: url("../img/buttonlogin.png");
+}
+
+
 .button.\--green {
     background: #75CC00;
     -webkit-box-shadow: 0 6px rgb(87, 153, 0);
@@ -6196,7 +6201,7 @@ p {
 }
 
 .navbar__brand {
-    background: url('../img/logo.svg') no-repeat 10px 8px;
+    background: no-repeat 10px 8px;
     display: inline-block;
     float: left;
     height: 50px;
@@ -6297,4 +6302,9 @@ p {
 .navbar-inverse.--cando.navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
     color: #fff;
     background-color: #ff000d;
+}
+.footer {
+    height: 20px; /* ความสูงของ footer */
+    display: block;
+    text-align: center;
 }

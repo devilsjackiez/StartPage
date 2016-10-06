@@ -38,12 +38,12 @@
 
                 while ($tools->fetch()) { ?>
                     <div class="col-md-4 infos__item">
-                        <div class="panel \--show" style="bottom: 0px;">
+                        <div class="panel \--show" style="bottom: 0px; width: 375px; height: 278px;">
                             <div class="panel__heading --icon-cal">
                                 <h3>
                                     <!--<img src="img/gears.png"
                                          class="pro-img-box" width="60px" ; height="60px" ;> --><?php /*echo $name_tool; */ ?>
-                                    <img src="<?php echo $img_tool ?>"
+                                    <img src="admin/<?php echo $img_tool ?>"
                                          class="img-rounded" width="60px" ; height="60px" ;> <?php echo $name_tool; ?>
                                 </h3>
                             </div>
@@ -52,7 +52,7 @@
                                 <!--<a href="<?php /*echo $url_tool; */?>" target="_blank" class="button center-block">Click</a>-->
                             </div>
                             <div class="panel__bottom" >
-                                <a href="<?php echo $url_tool; ?>" target="_blank" class="button center-block">Click</a>
+                                <a href="<?php echo $url_tool; ?>" target="_blank" class="button \--cream center-block">Click</a>
                             </div>
                         </div>
                     </div>

@@ -6,7 +6,7 @@ $_SESSION['id_brand_select'] = $_POST['id'];
 $result = getIdRole($_SESSION['id_brand_select']);
 $result->bind_result($roleId, $roleName);
 while ($result->fetch()) { ?>
-    <div class="col-md-6 infos__item">
+    <div class="col-md-6 infos__item" style="width: 21%; margin-left: 20px;">
         <div class="panel">
             <div class="panel__heading --icon-cal">
                 <h3 style="font-size: x-large;"><?php echo $roleName; ?></h3>

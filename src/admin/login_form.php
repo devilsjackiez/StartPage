@@ -1,5 +1,5 @@
-<br><br><br><br>
-<div class="container" style="border-style: ridge; background-color: #413a60;">
+<br><br><br><br><br><br><br><br>
+<div class="container" style="border-style: ridge; background-color: #3d3b3a; border-radius: 0.25cm;">
     <br>
     <br>
     <div class="row">
@@ -18,14 +18,14 @@
                     <div class="col-md-6 col-md-offset-3">
                         <div class="form-group">
                             <input class="form-control" placeholder="Username" id="username" name="username"
-                                   type="text">
+                                   type="text" value="admin">
                         </div>
                     </div>
                     <div class="col-md-6 col-md-offset-3">
 
                         <div class="form-group">
                             <input class="form-control" placeholder="Password" id="password" name="password"
-                                   type="password">
+                                   type="password" value="admin">
                         </div>
                     </div>
                 </div>
@@ -48,10 +48,10 @@
 
     </div>
     <div class="text-right">
-        <a href="../index.php"><span style="font-weight: bold; color: #342370;">UserPage</span></a>
+        <a href="../index.php"><span style="font-weight: bold; color: #a8a3a5;">UserPage</span></a>
     </div>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
 <script>
     $(document).ready(function () {
