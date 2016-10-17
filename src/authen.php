@@ -34,7 +34,9 @@ if ($res->getStatusCode() == '200') {
             $employee_fullname = $obj_emplyee['data']['attributes']['name'];
             $employee_email = $obj_emplyee['data']['attributes']['email'];
             $employee_role = $obj_emplyee['data']['attributes']['role'];
+            /*$employee_role = "Non-Agent";*/
             $employee_branch = $obj_emplyee['data']['attributes']['branch'];
+            /*$employee_branch = "ZQS";*/
 
             $_SESSION["employee_id"] = $employee_id;
             $_SESSION["employee_fullname"] = $employee_fullname;
@@ -51,7 +53,7 @@ if ($res->getStatusCode() == '200') {
 
 /*            echo $employee_id,"\n";*/
 /*            echo $employee_fullname,"\n";*/
-/*            echo $employee_email,"\n";*/
+            /*echo $employee_email,"\n";*/
 /*            echo $employee_role,"\n";
             echo $employee_branch,"\n";*/
             echo 'true';

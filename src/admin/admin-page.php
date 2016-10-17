@@ -79,6 +79,7 @@
         </div>
 
     </div>
+    <br>
 </div>
 <div class="section --dark --sm">
     <div class="container-fluid">
@@ -134,16 +135,16 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="name-tool" class="control-label">Name:</label>
-                        <input type="text" class="form-control" name="name-tool" id="name-tool" required value="JIRA">
+                        <input type="text" class="form-control" name="name-tool" id="name-tool" required value="">
                     </div>
                     <div class="form-group">
                         <label for="info-tool" class="control-label">Information:</label>
-                        <textarea class="form-control" name="info-tool" id="info-tool" required>JIRA Software offers flexible issue and project tracking with best-in-class agile tooling for software teams.</textarea>
+                        <textarea class="form-control" name="info-tool" id="info-tool" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="url-tool" class="control-label">Website:</label>
                         <input type="url" class="form-control" name="url-tool" id="url-tool" required
-                               value="http://jira.coast.ebuero.de/">
+                               value="">
                     </div>
                     <div class="form-group">
                         <label for="img-tool-tool" class="control-label">Image Tools:</label>
@@ -177,7 +178,7 @@
             $('#img-tool').val("uploads/"+$('#fileupload').val().split('\\').pop());
         });
 
-        $("#resetupload").click(function () {
+        $("#clear").click(function () {
             $('#img-tool').val("");
         });
 
@@ -200,6 +201,8 @@
                 contentId = parseInt($(this).data('id'));
             }
         });
+
+
         initToolBox();
         function initToolBox() {
             $('.list').each(function (i, listElement) {

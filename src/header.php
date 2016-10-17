@@ -19,9 +19,17 @@ require('includes/config.php');
     <link
         href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
         rel='stylesheet' type='text/css'/>
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="fonts/PatrickHand-Regular.ttf"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/bootstrap.css"/>
-    <!--    <link rel="stylesheet" href="css/bootstrap.min.css"/>-->
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css"/>-->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+
+
+
     <script src="css/flat/bootstrap-reset.css"></script>
     <script src="css/flat/bootstrap.min.css"></script>
     <script src="css/flat/owl.carousel.css"></script>
@@ -36,6 +44,7 @@ require('includes/config.php');
     <script src="jquery.min.js"></script>
     <script src="jquery-ui-1.11.4/jquery-ui.css"></script>
     <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.min.js"
     <!--    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
     <!--<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>-->
@@ -57,7 +66,7 @@ if ($_SESSION['employee_branch'] == null) { ?>
 <div class="navbar navbar-inverse navbar-fixed-top " id="menu" role="navigation">
     <?php } else if ($_SESSION['employee_branch'] == "CLBS"){ ?>
     <div class="navbar navbar-inverse --clbs navbar-fixed-top " id="menu" role="navigation">
-        <?php } else if ($_SESSION['employee_branch'] == "Cando"){ ?>
+        <?php } else if ($_SESSION['employee_branch'] == "CANDO"){ ?>
         <div class="navbar navbar-inverse --cando navbar-fixed-top " id="menu" role="navigation">
             <?php } else if ($_SESSION['employee_branch'] == "DBS") { ?>
             <div class="navbar navbar-inverse --DBS navbar-fixed-top " id="menu" role="navigation">
@@ -68,18 +77,18 @@ if ($_SESSION['employee_branch'] == null) { ?>
 
                     <div class="container">
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                    data-target=".navbar-collapse"><span
-                                    class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span> <span class="icon-bar"></span> <span
-                                    class="icon-bar"></span></button>
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span> <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
                             <a href="index.php" class="navbar__brand"
                                style="font-size: larger; font-style: inherit;font-weight: 700">Start
                                 page</a></div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right ">
 
-                                <?php if (isset($_SESSION['employee_email'])) { ?>
+                                <?php if (isset($_SESSION['employee_fullname'])) { ?>
                                     <!--<li><a href="admin-page.php">Manage</a></li>-->
                                     <li class="dropdown">
                                         <!--<img class="img-circle" src="img/Jackie.jpg" style="width: 28px;height: 28px;" ><span style="text-indent: 2.5em"></span>-->

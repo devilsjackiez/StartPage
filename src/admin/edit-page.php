@@ -4,7 +4,7 @@ include('connect.php');
 ?>
 
 <?php if (isset($_SESSION['name'])) { ?>
-    <div class="section">
+    <div class="section" style="margin-top: 40px;">
         <div class="row">
             <div class="col-md-10 col-md-offset-2">
                 <h1>Update Data With Modal</h1>
@@ -59,7 +59,7 @@ include('connect.php');
                                                data-info="<?php echo $to['info']; ?>"
                                                data-url="<?php echo $to['url']; ?>"
                                             >Edit</a></li>
-                                        <li><a href="#">Delete</a></li>
+                                        <!--<li><a href="#">Delete</a></li>-->
                                     </ul>
                                 </div><!-- /.dropdown -->
                             </td>

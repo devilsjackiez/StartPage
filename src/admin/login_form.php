@@ -17,15 +17,15 @@
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
                         <div class="form-group">
-                            <input class="form-control" placeholder="Username" id="username" name="username"
-                                   type="text" value="admin">
+                            <input class="form-control" placeholder="Admin Username" id="username" name="username"
+                                   type="text" value="">
                         </div>
                     </div>
                     <div class="col-md-6 col-md-offset-3">
 
                         <div class="form-group">
-                            <input class="form-control" placeholder="Password" id="password" name="password"
-                                   type="password" value="admin">
+                            <input class="form-control" placeholder="Admin Password" id="password" name="password"
+                                   type="password" value="">
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
         <a href="../index.php"><span style="font-weight: bold; color: #a8a3a5;">UserPage</span></a>
     </div>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <script>
     $(document).ready(function () {

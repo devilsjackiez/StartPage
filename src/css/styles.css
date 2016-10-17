@@ -1,0 +1,148 @@
+/*!* reset *!
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+!*    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;*!
+}*/
+/* HTML5 display-role reset for older browsers */
+/*article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}*/
+
+
+
+.breaking-news {
+    /*background:url(../img/balloon.png) no-repeat;*/
+    width:990px;
+    height:380px;
+    position:relative;
+    left:0;
+    box-sizing:border-box;
+    /*padding:140px 100px 100px 60px;*/
+}
+.breaking-news h2{
+    font-family: 'baam_-_skinnyregular', Arial, Tahoma, Verdana, sans-serif;
+    font-size:100px;
+    text-transform:uppercase;
+    color:#fff;
+    margin-bottom:0.3em;
+}
+.breaking-news h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size:36px;
+    line-height:1.222em;
+    margin-bottom:0.5em;
+    color: #86489b;
+
+}
+
+.breaking-news p {
+    font-family: 'Open Sans', sans-serif;
+    font-size:1.4em;
+    font-weight:400;
+    color: #413a60;
+    line-height:1.3em;
+    margin-bottom:0.8em;
+    margin-right: 2em;
+
+}
+.bxslider li{
+    clear:both;
+    overflow:hidden;
+    width: 99px;
+}
+.photo-news-border {
+    width:260px;
+    height:80%;
+    max-width: 240px;
+    max-height: 290px;
+    background: #FFFFFF;
+    float:left;
+    text-align:center;
+    margin:0 25px 25px 0;
+    box-sizing:border-box;
+    padding:10px;
+}
+.photo-praise-border {
+    width:200px;
+    height:202px;
+    background:#FFFFFF;
+    float:left;
+    text-align:center;
+    padding:10px;
+    box-sizing:border-box;
+}
+.photo-news-border img,
+.photo-praise-border img  {
+    vertical-align:middle;
+    text-align:center;
+}
+
+
+#tab-score-wrapper {
+
+    height:148px;
+    width:100%;
+    box-sizing:border-box;
+    position:absolute;
+    z-index:20;
+    bottom:20px;
+    overflow:hidden;
+}
+
+#tab-score ul {
+    display:block;
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+}
+#tab-score ul  li .--CLBSSCORE{
+    display:block;
+    clear:both;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size:72px;
+    font-weight:400;
+    line-height:normal;
+    color:#86489b;
+    text-align:center;
+    padding:45px 0;
+    line-height:1.081em;
+    width:100%;
+    margin:0;
+    box-sizing:border-box;
+}
+#tab-score .col {
+    width:33.33%;
+    float:left;
+    padding:0 10px;
+    box-sizing:border-box;
+    text-align:center;
+    display:block;
+    font-size:72px;
+}
+#tab-score ul li b,
+#tab-score ul li strong {
+    color:#a44098;
+}
+#tab-score span.highlight{
+    color:#a44098;
+    font-size:94px;
+}
