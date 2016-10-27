@@ -40,16 +40,16 @@ if (isset($_SESSION['employee_fullname'])) {
                 <!--Wellcome Name and HI-->
                 <?php if ($_SESSION['employee_branch'] == 'CLBS') { ?>
                     <h2 style="font-family: 'Open Sans', Arial, sans-serif;font-weight: 800; font-size: 2.5ch; ">
-                        Hi ! <?php echo $_SESSION['employee_fullname'] ?>, have a great day!</h2>
+                        Hi  <?php echo $_SESSION['employee_fullname'] ?>, have a great day!</h2>
                 <?php } else if ($_SESSION['employee_branch'] == 'CANDO') { ?>
                     <h2 style="font-family: 'Patrick Hand', sans-serif;font-weight: 800; font-size: 3.4ch;color:#66b9ff; ">
-                        Hi ! <?php echo $_SESSION['employee_fullname'] ?>, have a great day!</h2>
+                        Hi  <?php echo $_SESSION['employee_fullname'] ?>, have a great day!</h2>
                 <?php } else if ($_SESSION['employee_branch'] == 'DBS') { ?>
                     <h2 style="font-family: 'Open Sans', Arial, sans-serif;font-weight: 800; font-size: 3ch; ">
-                        Hi ! <?php echo $_SESSION['employee_fullname'] ?>, hab einen tollen Arbeitstag!</h2>
+                        Hi  <?php echo $_SESSION['employee_fullname'] ?>, hab einen tollen Arbeitstag!</h2>
                 <?php } else if ($_SESSION['employee_branch'] == 'ZQS') { ?>
                     <h2 style="font-family: 'Open Sans', Arial, sans-serif;font-weight: 800; font-size: 3ch; ">
-                        Hi ! <?php echo $_SESSION['employee_fullname'] ?>, have a great day!</h2>
+                        Hi  <?php echo $_SESSION['employee_fullname'] ?>, have a great day!</h2>
                 <?php } ?>
 
                 <?php echo $_SESSION['employee_id']; ?>
